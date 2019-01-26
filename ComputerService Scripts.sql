@@ -28,6 +28,7 @@ FOREIGN KEY (Customer_id) REFERENCES customers(Customer_id)
 
 CREATE TABLE Parts(
 Part_id nvarchar(32),
+Part_type nvarchar(32),
 PartName VARCHAR(64),
 Part_price decimal(10),
 PRIMARY KEY (Part_id)
@@ -95,3 +96,39 @@ INSERT INTO Parts()
 VALUES(3, 'CPU-i7', 200)
 INSERT INTO Parts()
 VALUES(4, 'CPU-i9', 250)
+INSERT INTO Parts()
+VALUES(5, 'Motherboard-AsRock', 75)
+INSERT INTO Parts()
+VALUES(6, 'Motherboard-ASUS', 125)
+INSERT INTO Parts()
+VALUES(7, 'Motherboard-Gigabyte', 150)
+INSERT INTO Parts()
+VALUES(8, 'RAM-2GB', 40,'RAM')
+INSERT INTO Parts()
+VALUES(9, 'RAM-4GB', 80,'RAM')
+INSERT INTO Parts()
+VALUES(10, 'RAM-8GB', 120,'RAM')
+INSERT INTO Parts()
+VALUES(11, 'RAM-16GB', 240,'RAM')
+INSERT INTO Parts()
+VALUES(12, 'HDD-500GB', 80,'HDD')
+INSERT INTO Parts()
+VALUES(13, 'HDD-750GB', 105,'HDD')
+INSERT INTO Parts()
+VALUES(14, 'HDD-1000GB', 135,'HDD')
+INSERT INTO Parts()
+VALUES(15, 'HDD-1500GB', 165,'HDD')
+INSERT INTO Parts()
+VALUES(16, 'HDD-2000GB', 180,'HDD')
+
+-- Insert into Diagnostic
+INSERT INTO Diagnostic()
+VALUES(1, 1, 1,'RAM Upgraded')
+INSERT INTO Diagnostic()
+VALUES(3, 3, 3,'SSD Added')
+
+-- Insert into Result
+INSERT INTO result()
+VALUES(1, 1, 1, 9, 0, 'RAM-4GB Upgraded', 80)
+INSERT INTO result()
+VALUES(2, 3, 3, 20, 10, 'RAM-4GB Upgraded', 210)
