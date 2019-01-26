@@ -63,13 +63,10 @@ FOREIGN KEY (Part_id) REFERENCES Parts(Part_id)
 -- Insert into Customers
 INSERT INTO Customers()
 VALUES(1, 'Dimitrov', 'Ivan','dimitrov.i@gmail.com','0883887266')
-
 INSERT INTO Customers()
 VALUES(2, 'Nikolaev', 'Stanislav','stan.nikolaev','0898372612')
-
 INSERT INTO Customers()
 VALUES(3, 'Kostadinov', 'Daniel','daniel.kostadinov','0888448921')
-
 INSERT INTO Customers()
 VALUES(4, 'Ivanov', 'NIkolay','niki.ivanov@gmail.com','0883717365')
 
