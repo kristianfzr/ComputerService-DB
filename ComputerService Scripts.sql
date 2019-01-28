@@ -28,9 +28,9 @@ FOREIGN KEY (Customer_id) REFERENCES customers(Customer_id)
 
 CREATE TABLE Parts(
 Part_id nvarchar(32),
-Part_type nvarchar(32),
 PartName VARCHAR(64),
 Part_price decimal(10),
+Part_type nvarchar(32),
 PRIMARY KEY (Part_id)
 );
 
