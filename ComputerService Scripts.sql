@@ -47,6 +47,7 @@ FOREIGN KEY (Customer_id) REFERENCES Customers(Customer_id)
 );
 -- Create table Result
 CREATE TABLE Result(
+Result_id int,
 Service_order int,
 Computer_id int,
 Customer_id int,
@@ -54,9 +55,10 @@ Part_id NVARCHAR(32),
 Add_work DECIMAL(10),
 Diagnostic_info VARCHAR(255),
 Total_cost DECIMAL(10),
+PRIMARY KEY (Result_id),
 FOREIGN KEY (Service_order) REFERENCES Diagnostic(Service_order),
 FOREIGN KEY (Computer_id) REFERENCES Computers(Computer_id),
-FOREIGN KEY (Customer_id) REFERENCES Customers(Customer_id),
+FOREIGN KEY (Customer_id)  REFERENCES Customers(Customer_id),
 FOREIGN KEY (Part_id) REFERENCES Parts(Part_id)
 );
 
@@ -126,6 +128,6 @@ VALUES(3, 3, 3,'SSD Added')
 
 -- Insert into Result
 INSERT INTO result()
-VALUES(1, 1, 1, 9, 0, 'RAM-4GB Upgraded', 80)
+VALUES(1,1, 1, 1, 9, 0, 'RAM-4GB Upgraded', 80)
 INSERT INTO result()
-VALUES(2, 3, 3, 20, 10, 'RAM-4GB Upgraded', 210)
+VALUES(2,2, 3, 3, 20, 10, 'RAM-4GB Upgraded', 210)
